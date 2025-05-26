@@ -1,9 +1,8 @@
-
 #ifndef SEMANTIC_ANALYZER_HPP
 #define SEMANTIC_ANALYZER_HPP
 
-#include "Parser.hpp"
-#include "SymbolTable.hpp"
+#include "../parser/Parser.hpp"
+#include "../symbol/SymbolTable.hpp"
 #include <memory>
 
 class SemanticAnalyzer {

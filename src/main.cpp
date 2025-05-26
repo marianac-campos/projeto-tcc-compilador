@@ -1,13 +1,11 @@
-
-#include "Lexer.hpp"
-#include "Parser.hpp"
-#include "SemanticAnalyzer.hpp"
-#include "CodeGenerator.hpp"
+#include "../src/lexer/Lexer.hpp"
+#include "../src/parser/Parser.hpp"
+#include "../src/semantic/SemanticAnalyzer.hpp"
+#include "../src/codegen/CodeGenerator.hpp"
 #include <iostream>
 #include <memory>
 #include <fstream>
 
-// Função para imprimir a AST
 void printAST(const std::shared_ptr<ASTNode>& node, int depth = 0) {
     for (int i = 0; i < depth; ++i) std::cout << "  ";
     std::cout << node->nodeType << ": " << node->value << std::endl;

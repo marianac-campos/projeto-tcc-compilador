@@ -1,8 +1,7 @@
-
 #ifndef CODE_GENERATOR_HPP
 #define CODE_GENERATOR_HPP
 
-#include "Parser.hpp"
+#include "../parser/Parser.hpp"
 #include <string>
 #include <memory>
 

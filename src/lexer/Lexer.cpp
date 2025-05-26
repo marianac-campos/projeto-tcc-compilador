@@ -8,31 +8,25 @@ Token Lexer::nextToken() {
     while (currentPosition < source.length()) {
         char currentChar = source[currentPosition];
 
-        // Ignorar espaços em branco
         if (std::isspace(currentChar)) {
             currentPosition++;
             continue;
         }
 
-        // Ignorar comentários de linha //
         if (currentChar == '/' && currentPosition + 1 < source.length() && source[currentPosition + 1] == '/') {
-            currentPosition += 2; // pula os dois '/'
+            currentPosition += 2; 
             while (currentPosition < source.length() && source[currentPosition] != '\n') {
                 currentPosition++;
             }
-            continue; // volta pro while
+            continue; 
         }
 
-        // Identificadores ou palavras-chave
         if (std::isalpha(currentChar)) return readIdentifierOrKeyword();
 
-        // Números
         if (std::isdigit(currentChar)) return readNumber();
 
-        // Strings
         if (currentChar == '"') return readString();
 
-        // Operadores e símbolos
         return readOperatorOrSymbol();
     }
 
@@ -62,13 +56,13 @@ Token Lexer::readNumber() {
 
 Token Lexer::readString() {
     std::string value;
-    currentPosition++; // pula a aspa inicial
+    currentPosition++; 
 
     while (currentPosition < source.length() && source[currentPosition] != '"') {
         value += source[currentPosition++];
     }
 
-    if (currentPosition < source.length()) currentPosition++; // pula a aspa final
+    if (currentPosition < source.length()) currentPosition++; 
 
     return { TokenType::String, value };
 }

@@ -1,4 +1,3 @@
-
 #include "CodeGenerator.hpp"
 #include <sstream>
 
@@ -30,7 +29,6 @@ void CodeGenerator::generateNode(const std::shared_ptr<ASTNode>& node) {
         }
     }
     else if (node->nodeType == "Expression") {
-        // Simples atribuição ou uso
         codeSection += "; Expression uses " + node->value + "\n";
     }
     else if (node->nodeType == "If") {
@@ -41,13 +39,13 @@ void CodeGenerator::generateNode(const std::shared_ptr<ASTNode>& node) {
         codeSection += "CMP " + node->children[0]->value + ", 0\n";
         codeSection += "JE " + elseLabel + "\n";
 
-        generateNode(node->children[1]); // if block
+        generateNode(node->children[1]); 
 
         codeSection += "JMP " + endLabel + "\n";
         codeSection += elseLabel + ":\n";
 
         if (node->children.size() > 2) {
-            generateNode(node->children[2]); // else block
+            generateNode(node->children[2]); 
         }
 
         codeSection += endLabel + ":\n";
@@ -60,7 +58,7 @@ void CodeGenerator::generateNode(const std::shared_ptr<ASTNode>& node) {
         codeSection += "CMP " + node->children[0]->value + ", 0\n";
         codeSection += "JE " + endLabel + "\n";
 
-        generateNode(node->children[1]); // block
+        generateNode(node->children[1]);
 
         codeSection += "JMP " + startLabel + "\n";
         codeSection += endLabel + ":\n";
@@ -69,15 +67,15 @@ void CodeGenerator::generateNode(const std::shared_ptr<ASTNode>& node) {
         std::string startLabel = newLabel();
         std::string endLabel = newLabel();
 
-        generateNode(node->children[0]); // inicialização
+        generateNode(node->children[0]); 
 
         codeSection += startLabel + ":\n";
         codeSection += "CMP " + node->children[1]->value + ", 0\n";
         codeSection += "JE " + endLabel + "\n";
 
-        generateNode(node->children[3]); // bloco
+        generateNode(node->children[3]); 
 
-        generateNode(node->children[2]); // incremento
+        generateNode(node->children[2]); 
 
         codeSection += "JMP " + startLabel + "\n";
         codeSection += endLabel + ":\n";

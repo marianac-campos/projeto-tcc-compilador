@@ -1,4 +1,3 @@
-
 #include "Parser.hpp"
 #include <stdexcept>
 #include <iostream>
@@ -34,7 +33,6 @@ std::shared_ptr<ASTNode> Parser::parseStatement() {
     if (currentToken.value == "func") return parseFunction();
     if (currentToken.value == "{") return parseBlock();
 
-    // Fallback: expressão simples
     return parseExpression();
 }
 
@@ -51,11 +49,11 @@ std::shared_ptr<ASTNode> Parser::parseBlock() {
 std::shared_ptr<ASTNode> Parser::parseIf() {
     advance();
     auto node = std::make_shared<ASTNode>("If", "");
-    node->children.push_back(parseExpression()); // condição
-    node->children.push_back(parseBlock());      // bloco if
+    node->children.push_back(parseExpression()); 
+    node->children.push_back(parseBlock());      
     if (currentToken.value == "else") {
         advance();
-        node->children.push_back(parseBlock());  // bloco else
+        node->children.push_back(parseBlock()); 
     }
     return node;
 }
@@ -71,10 +69,10 @@ std::shared_ptr<ASTNode> Parser::parseWhile() {
 std::shared_ptr<ASTNode> Parser::parseFor() {
     advance();
     auto node = std::make_shared<ASTNode>("For", "");
-    node->children.push_back(parseExpression()); // inicialização
-    node->children.push_back(parseExpression()); // condição
-    node->children.push_back(parseExpression()); // incremento
-    node->children.push_back(parseBlock());      // corpo
+    node->children.push_back(parseExpression()); 
+    node->children.push_back(parseExpression()); 
+    node->children.push_back(parseExpression()); 
+    node->children.push_back(parseBlock());      
     return node;
 }
 
@@ -87,7 +85,6 @@ std::shared_ptr<ASTNode> Parser::parseFunction() {
     auto node = std::make_shared<ASTNode>("Function", funcName);
 
     expect(TokenType::Symbol, "Expected '('");
-    // Argumentos podem ser implementados aqui
     expect(TokenType::Symbol, "Expected ')'");
 
     expect(TokenType::Symbol, "Expected ':'");
