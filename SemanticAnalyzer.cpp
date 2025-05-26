@@ -1,71 +1,45 @@
 #include "SemanticAnalyzer.hpp"
 #include <iostream>
 
-SemanticAnalyzer::SemanticAnalyzer(Lexer& lexer) : lexer(lexer) {
-    nextToken();
+SemanticAnalyzer::SemanticAnalyzer() {}
+
+void SemanticAnalyzer::analyze(const std::shared_ptr<ASTNode>& root) {
+    analyzeNode(root);
 }
 
-void SemanticAnalyzer::nextToken() {
-    currentToken = lexer.nextToken();
-}
-
-void SemanticAnalyzer::analyze() {
-    while (currentToken.type != TokenType::EndOfFile) {
-        if (currentToken.type == TokenType::Keyword && (currentToken.value == "int" || currentToken.value == "string")) {
-            handleDeclaration();
-        } else if (currentToken.type == TokenType::Identifier) {
-            handleUsage();
-        } else if (currentToken.type == TokenType::Symbol && currentToken.value == "{") {
-            symbolTable.enterScope();
-            nextToken();
-        } else if (currentToken.type == TokenType::Symbol && currentToken.value == "}") {
-            symbolTable.exitScope();
-            nextToken();
-        } else {
-            nextToken();
+void SemanticAnalyzer::analyzeNode(const std::shared_ptr<ASTNode>& node) {
+    if (node->nodeType == "Program" || node->nodeType == "Block") {
+        symbolTable.enterScope();
+        for (const auto& child : node->children) {
+            analyzeNode(child);
+        }
+        symbolTable.exitScope();
+    }
+    else if (node->nodeType == "Declaration") {
+        auto parts = node->value.find(':');
+        std::string varName = node->value.substr(0, parts);
+        std::string varType = node->value.substr(parts + 1);
+        
+        if (!symbolTable.declare(varName, varType)) {
+            std::cerr << "Erro: variável '" << varName << "' já declarada neste escopo.\n";
         }
     }
-}
-
-void SemanticAnalyzer::handleDeclaration() {
-    std::string varType = currentToken.value;
-    nextToken(); // move to identifier
-
-    if (currentToken.type != TokenType::Identifier) {
-        std::cerr << "Erro: identificador esperado após tipo '" << varType << "'.\n";
-        return;
-    }
-
-    std::string varName = currentToken.value;
-
-    if (!symbolTable.declare(varName, varType)) {
-        std::cerr << "Erro: variável '" << varName << "' já declarada neste escopo.\n";
-    }
-
-    nextToken(); // move to = or ;
-
-    if (currentToken.type == TokenType::Operator && currentToken.value == "=") {
-        nextToken(); // move to value
-
-        if ((varType == "int" && currentToken.type != TokenType::Number) ||
-            (varType == "string" && currentToken.type != TokenType::String)) {
-            std::cerr << "Erro: tipo incompatível na atribuição para variável '" << varName << "'.\n";
+    else if (node->nodeType == "Expression") {
+        std::string varName = node->value;
+        if (!symbolTable.isDeclared(varName)) {
+            std::cerr << "Erro: variável '" << varName << "' não declarada.\n";
         }
-
-        nextToken(); // move after value
     }
-
-    if (currentToken.type == TokenType::Operator && currentToken.value == ";") {
-        nextToken(); // consume ;
+    else if (node->nodeType == "If" || node->nodeType == "While" || node->nodeType == "For") {
+        for (const auto& child : node->children) {
+            analyzeNode(child);
+        }
     }
-}
-
-void SemanticAnalyzer::handleUsage() {
-    std::string varName = currentToken.value;
-
-    if (!symbolTable.isDeclared(varName)) {
-        std::cerr << "Erro: variável '" << varName << "' usada sem declaração.\n";
+    else if (node->nodeType == "Function") {
+        symbolTable.enterScope();
+        for (const auto& child : node->children) {
+            analyzeNode(child);
+        }
+        symbolTable.exitScope();
     }
-
-    nextToken();
 }

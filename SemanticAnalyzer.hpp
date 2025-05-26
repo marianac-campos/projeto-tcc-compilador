@@ -1,22 +1,20 @@
+
 #ifndef SEMANTIC_ANALYZER_HPP
 #define SEMANTIC_ANALYZER_HPP
 
-#include "Lexer.hpp"
+#include "Parser.hpp"
 #include "SymbolTable.hpp"
+#include <memory>
 
 class SemanticAnalyzer {
 public:
-    SemanticAnalyzer(Lexer& lexer);
-    void analyze();
+    SemanticAnalyzer();
+    void analyze(const std::shared_ptr<ASTNode>& root);
 
 private:
-    Lexer& lexer;
     SymbolTable symbolTable;
-    Token currentToken;
 
-    void nextToken();
-    void handleDeclaration();
-    void handleUsage();
+    void analyzeNode(const std::shared_ptr<ASTNode>& node);
 };
 
 #endif
