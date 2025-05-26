@@ -69,10 +69,27 @@ std::shared_ptr<ASTNode> Parser::parseWhile() {
 std::shared_ptr<ASTNode> Parser::parseFor() {
     advance();
     auto node = std::make_shared<ASTNode>("For", "");
+
+    expect(TokenType::Symbol, "Expected '('");
+
+    if (currentToken.value == "var") {
+        node->children.push_back(parseDeclaration()); 
+    } else {
+        node->children.push_back(parseExpression()); 
+    }
+
+    expect(TokenType::Symbol, "Expected ';'");
+
     node->children.push_back(parseExpression()); 
+
+    expect(TokenType::Symbol, "Expected ';'");
+
     node->children.push_back(parseExpression()); 
-    node->children.push_back(parseExpression()); 
-    node->children.push_back(parseBlock());      
+
+    expect(TokenType::Symbol, "Expected ')'");
+
+    node->children.push_back(parseBlock());
+
     return node;
 }
 

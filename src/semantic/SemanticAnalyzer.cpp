@@ -30,10 +30,20 @@ void SemanticAnalyzer::analyzeNode(const std::shared_ptr<ASTNode>& node) {
             std::cerr << "Erro: variável '" << varName << "' não declarada.\n";
         }
     }
-    else if (node->nodeType == "If" || node->nodeType == "While" || node->nodeType == "For") {
+    else if (node->nodeType == "If" || node->nodeType == "While") {
         for (const auto& child : node->children) {
             analyzeNode(child);
         }
+    }
+    else if (node->nodeType == "For") {
+        symbolTable.enterScope();
+
+        analyzeNode(node->children[0]); 
+        analyzeNode(node->children[1]); 
+        analyzeNode(node->children[2]); 
+        analyzeNode(node->children[3]); 
+
+        symbolTable.exitScope();
     }
     else if (node->nodeType == "Function") {
         symbolTable.enterScope();
