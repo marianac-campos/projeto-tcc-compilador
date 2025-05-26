@@ -16,21 +16,20 @@ void printAST(const std::shared_ptr<ASTNode>& node, int depth = 0) {
 
 int main() {
     std::string source = R"(
-        {
-            var x: int = 10;
-            var nome: string = "João";
-            if (x) {
-                print(nome);
-            } else {
-                nome = "Maria";
+        func fatorial(n: int): int {
+            var resultado: int = 1;
+            for (var i: int = 1; i <= n; i = i + 1) {
+                resultado = resultado * i;
             }
-            while (x) {
-                x = x + 1;
-            }
-            func soma(a: int, b: int): int {
-                return a + b;
-            }
+            return resultado;
         }
+
+        print("Digite um número:");
+        var numero: int;
+        input(numero);
+
+        var fat: int = fatorial(numero);
+        print("O fatorial de " + numero + " é " + fat);
     )";
 
     Lexer lexer(source);

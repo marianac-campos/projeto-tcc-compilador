@@ -28,6 +28,12 @@ void CodeGenerator::generateNode(const std::shared_ptr<ASTNode>& node) {
             codeSection += node->children[0]->value + "\n";
         }
     }
+    else if (node->nodeType == "Param") {
+        auto pos = node->value.find(':');
+        std::string varName = node->value.substr(0, pos);
+
+        dataSection += varName + " DW 0\n";
+    }
     else if (node->nodeType == "Expression") {
         codeSection += "; Expression uses " + node->value + "\n";
     }
@@ -39,13 +45,13 @@ void CodeGenerator::generateNode(const std::shared_ptr<ASTNode>& node) {
         codeSection += "CMP " + node->children[0]->value + ", 0\n";
         codeSection += "JE " + elseLabel + "\n";
 
-        generateNode(node->children[1]); 
+        generateNode(node->children[1]);
 
         codeSection += "JMP " + endLabel + "\n";
         codeSection += elseLabel + ":\n";
 
         if (node->children.size() > 2) {
-            generateNode(node->children[2]); 
+            generateNode(node->children[2]);
         }
 
         codeSection += endLabel + ":\n";
@@ -82,8 +88,16 @@ void CodeGenerator::generateNode(const std::shared_ptr<ASTNode>& node) {
     }
     else if (node->nodeType == "Function") {
         codeSection += node->value + ":\n";
+
         for (const auto& child : node->children) {
             generateNode(child);
+        }
+
+        codeSection += "RET\n";
+    }
+    else if (node->nodeType == "Return") {
+        if (!node->children.empty()) {
+            codeSection += "MOV RET, " + node->children[0]->value + "\n";
         }
         codeSection += "RET\n";
     }

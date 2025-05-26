@@ -24,6 +24,12 @@ void SemanticAnalyzer::analyzeNode(const std::shared_ptr<ASTNode>& node) {
             std::cerr << "Erro: variável '" << varName << "' já declarada neste escopo.\n";
         }
     }
+    else if (node->nodeType == "Param") {
+        auto parts = node->value.find(':');
+        std::string paramName = node->value.substr(0, parts);
+        std::string paramType = node->value.substr(parts + 1);
+        symbolTable.declare(paramName, paramType);
+    }
     else if (node->nodeType == "Expression") {
         std::string varName = node->value;
         if (!symbolTable.isDeclared(varName)) {
@@ -47,9 +53,22 @@ void SemanticAnalyzer::analyzeNode(const std::shared_ptr<ASTNode>& node) {
     }
     else if (node->nodeType == "Function") {
         symbolTable.enterScope();
+
         for (const auto& child : node->children) {
-            analyzeNode(child);
+            if (child->nodeType == "Param") {
+                auto split = child->value.find(':');
+                std::string name = child->value.substr(0, split);
+                std::string type = child->value.substr(split + 1);
+                symbolTable.declare(name, type);
+            }
         }
+
+        for (const auto& child : node->children) {
+            if (child->nodeType != "Param") {
+                analyzeNode(child);
+            }
+        }
+
         symbolTable.exitScope();
     }
 }

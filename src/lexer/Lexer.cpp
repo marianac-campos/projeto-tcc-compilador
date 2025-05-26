@@ -69,11 +69,17 @@ Token Lexer::readString() {
 
 Token Lexer::readOperatorOrSymbol() {
     char currentChar = source[currentPosition++];
-    if (currentChar == '+' || currentChar == '-' || currentChar == '=' || currentChar == ';') {
+
+    if (currentChar == '+' || currentChar == '-' || currentChar == '=' || currentChar == '*'
+        || currentChar == '/' ) {
         return { TokenType::Operator, std::string(1, currentChar) };
-    } else if (currentChar == '{' || currentChar == '}') {
+    } 
+    else if (currentChar == '{' || currentChar == '}' ||
+             currentChar == '(' || currentChar == ')' ||
+             currentChar == ':' || currentChar == ',' || currentChar == ';') {
         return { TokenType::Symbol, std::string(1, currentChar) };
-    } else {
+    } 
+    else {
         return { TokenType::Invalid, std::string(1, currentChar) };
     }
 }

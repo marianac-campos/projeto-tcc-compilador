@@ -4,7 +4,18 @@
 #include <string>
 
 enum class TokenType {
-    Keyword, Identifier, Number, String, Operator, Symbol, EndOfFile, Invalid
+    Keyword, 
+    Identifier, 
+    Number, 
+    String, 
+    Operator, 
+    Symbol, 
+    EndOfFile, 
+    Invalid, 
+    Integer, 
+    Float, 
+    Boolean, 
+    Char
 };
 
 struct Token {
