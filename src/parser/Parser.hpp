@@ -1,3 +1,4 @@
+
 #ifndef PARSER_HPP
 #define PARSER_HPP
 
@@ -6,6 +7,7 @@
 #include <memory>
 #include <string>
 
+// Definição da AST básica
 struct ASTNode {
     std::string nodeType;
     std::string value;
