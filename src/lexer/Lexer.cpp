@@ -39,10 +39,19 @@ Token Lexer::readIdentifierOrKeyword() {
         value += source[currentPosition++];
     }
 
-    if (value == "int" || value == "string" || value == "return") {
+    // Check for specific type keywords first
+    if (value == "int") return { TokenType::Integer, value };
+    if (value == "float") return { TokenType::Float, value }; // Assuming 'float' is a keyword
+    if (value == "bool") return { TokenType::Boolean, value }; // Assuming 'bool' is a keyword
+    if (value == "char") return { TokenType::Char, value };   // Assuming 'char' is a keyword
+    // Add other specific type keywords here if needed (e.g., void)
+
+    // Check for other general keywords
+    if (value == "return" || value == "string" || value == "for" || value == "print" || value == "input" || value == "var" || value == "func" /* Add other general keywords like if, else, while, etc. */) {
         return { TokenType::Keyword, value };
     }
 
+    // If it's not a recognized keyword, it's an identifier
     return { TokenType::Identifier, value };
 }
 

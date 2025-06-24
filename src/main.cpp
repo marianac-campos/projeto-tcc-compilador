@@ -16,20 +16,7 @@ void printAST(const std::shared_ptr<ASTNode>& node, int depth = 0) {
 
 int main() {
     std::string source = R"(
-        func fatorial(n: int): int {
-            var resultado: int = 1;
-            for (var i: int = 1; i <= n; i = i + 1) {
-                resultado = resultado * i;
-            }
-            return resultado;
-        }
-
-        print("Digite um número:");
-        var numero: int;
-        input(numero);
-
         var fat: int = fatorial(numero);
-        print("O fatorial de " + numero + " é " + fat);
     )";
 
     Lexer lexer(source);
@@ -38,7 +25,7 @@ int main() {
     CodeGenerator codeGenerator;
 
     try {
-        auto ast = parser.parseProgram();
+        auto ast = parser.parse(); 
         std::cout << "==== AST ====" << std::endl;
         printAST(ast);
 
