@@ -1,0 +1,15 @@
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/bin/Debug/net8.0/MACSLangGeneratedApp
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/bin/Debug/net8.0/MACSLangGeneratedApp.deps.json
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/bin/Debug/net8.0/MACSLangGeneratedApp.runtimeconfig.json
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/bin/Debug/net8.0/MACSLangGeneratedApp.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/bin/Debug/net8.0/MACSLangGeneratedApp.pdb
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.AssemblyInfoInputs.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.AssemblyInfo.cs
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.csproj.CoreCompileInputs.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.sourcelink.json
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/refint/MACSLangGeneratedApp.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.pdb
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/MACSLangGeneratedApp.genruntimeconfig.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLangGeneratedApp/obj/Debug/net8.0/ref/MACSLangGeneratedApp.dll

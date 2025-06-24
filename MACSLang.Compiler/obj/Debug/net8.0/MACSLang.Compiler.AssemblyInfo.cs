@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MACSLang.Compiler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc84663e284ea1e43c6ad2530eb11d7fdb4cb483")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b6f0d9d59f8ab519fcd2cf84f84207fd5f59ff2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MACSLang.Compiler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MACSLang.Compiler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
