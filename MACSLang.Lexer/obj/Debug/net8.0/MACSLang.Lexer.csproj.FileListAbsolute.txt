@@ -1,0 +1,12 @@
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/bin/Debug/net8.0/MACSLang.Lexer.deps.json
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/bin/Debug/net8.0/MACSLang.Lexer.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/bin/Debug/net8.0/MACSLang.Lexer.pdb
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/MACSLang.Lexer.GeneratedMSBuildEditorConfig.editorconfig
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/MACSLang.Lexer.AssemblyInfoInputs.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/MACSLang.Lexer.AssemblyInfo.cs
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/MACSLang.Lexer.csproj.CoreCompileInputs.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/MACSLang.Lexer.sourcelink.json
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/MACSLang.Lexer.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/refint/MACSLang.Lexer.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/MACSLang.Lexer.pdb
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/obj/Debug/net8.0/ref/MACSLang.Lexer.dll

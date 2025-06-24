@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MACSLang.Syntax/1.0.0": {
+        "dependencies": {
+          "MACSLang.Lexer": "1.0.0"
+        },
+        "runtime": {
+          "MACSLang.Syntax.dll": {}
+        }
+      },
+      "MACSLang.Lexer/1.0.0": {
+        "runtime": {
+          "MACSLang.Lexer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MACSLang.Syntax/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MACSLang.Lexer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

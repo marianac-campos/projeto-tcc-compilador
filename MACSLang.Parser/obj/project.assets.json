@@ -1,0 +1,116 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "MACSLang.Lexer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MACSLang.Lexer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MACSLang.Lexer.dll": {}
+        }
+      },
+      "MACSLang.Syntax/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MACSLang.Lexer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MACSLang.Syntax.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MACSLang.Syntax.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MACSLang.Lexer/1.0.0": {
+      "type": "project",
+      "path": "../MACSLang.Lexer/MACSLang.Lexer.csproj",
+      "msbuildProject": "../MACSLang.Lexer/MACSLang.Lexer.csproj"
+    },
+    "MACSLang.Syntax/1.0.0": {
+      "type": "project",
+      "path": "../MACSLang.Syntax/MACSLang.Syntax.csproj",
+      "msbuildProject": "../MACSLang.Syntax/MACSLang.Syntax.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "MACSLang.Lexer >= 1.0.0",
+      "MACSLang.Syntax >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/marianacampos/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Parser/MACSLang.Parser.csproj",
+      "projectName": "MACSLang.Parser",
+      "projectPath": "/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Parser/MACSLang.Parser.csproj",
+      "packagesPath": "/home/marianacampos/.nuget/packages/",
+      "outputPath": "/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Parser/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/marianacampos/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/MACSLang.Lexer.csproj": {
+              "projectPath": "/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Lexer/MACSLang.Lexer.csproj"
+            },
+            "/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/MACSLang.Syntax.csproj": {
+              "projectPath": "/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/MACSLang.Syntax.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/home/marianacampos/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

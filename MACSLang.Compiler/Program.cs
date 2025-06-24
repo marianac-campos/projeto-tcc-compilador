@@ -328,7 +328,7 @@ internal class Program
                 @"<Project Sdk=""Microsoft.NET.Sdk"">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
@@ -368,7 +368,7 @@ internal class Program
                     Console.ResetColor();
 
                     // Determinar o caminho do executável gerado
-                    var targetFrameworkForRun = "net6.0";
+                    var targetFrameworkForRun = "net8.0";
                     var executablePath = Path.Combine(tempProjectDir, "bin", "Debug", targetFrameworkForRun,
                         $"{tempProjectName}.dll");
 

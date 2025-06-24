@@ -1,0 +1,16 @@
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/bin/Debug/net8.0/MACSLang.Syntax.deps.json
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/bin/Debug/net8.0/MACSLang.Syntax.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/bin/Debug/net8.0/MACSLang.Syntax.pdb
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/bin/Debug/net8.0/MACSLang.Lexer.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/bin/Debug/net8.0/MACSLang.Lexer.pdb
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.csproj.AssemblyReference.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.GeneratedMSBuildEditorConfig.editorconfig
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.AssemblyInfoInputs.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.AssemblyInfo.cs
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.csproj.CoreCompileInputs.cache
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.sourcelink.json
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.367DFF5C.Up2Date
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/refint/MACSLang.Syntax.dll
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/MACSLang.Syntax.pdb
+/home/marianacampos/Documents/college/projeto-tcc-compilador/MACSLang.Syntax/obj/Debug/net8.0/ref/MACSLang.Syntax.dll

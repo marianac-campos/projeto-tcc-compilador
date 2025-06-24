@@ -1,0 +1,109 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MACSLang.Compiler/1.0.0": {
+        "dependencies": {
+          "MACSLang.CodeGenerator": "1.0.0",
+          "MACSLang.Lexer": "1.0.0",
+          "MACSLang.Parser": "1.0.0",
+          "MACSLang.SemanticAnalyzer": "1.0.0"
+        },
+        "runtime": {
+          "MACSLang.Compiler.dll": {}
+        }
+      },
+      "MACSLang.CodeGenerator/1.0.0": {
+        "dependencies": {
+          "MACSLang.Lexer": "1.0.0",
+          "MACSLang.Syntax": "1.0.0"
+        },
+        "runtime": {
+          "MACSLang.CodeGenerator.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MACSLang.Lexer/1.0.0": {
+        "runtime": {
+          "MACSLang.Lexer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MACSLang.Parser/1.0.0": {
+        "dependencies": {
+          "MACSLang.Lexer": "1.0.0",
+          "MACSLang.Syntax": "1.0.0"
+        },
+        "runtime": {
+          "MACSLang.Parser.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MACSLang.SemanticAnalyzer/1.0.0": {
+        "dependencies": {
+          "MACSLang.Lexer": "1.0.0",
+          "MACSLang.Syntax": "1.0.0"
+        },
+        "runtime": {
+          "MACSLang.SemanticAnalyzer.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MACSLang.Syntax/1.0.0": {
+        "dependencies": {
+          "MACSLang.Lexer": "1.0.0"
+        },
+        "runtime": {
+          "MACSLang.Syntax.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MACSLang.Compiler/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MACSLang.CodeGenerator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MACSLang.Lexer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MACSLang.Parser/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MACSLang.SemanticAnalyzer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MACSLang.Syntax/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -19,9 +19,9 @@ Este é um projeto de desenvolvimento de um compilador para a linguagem de progr
 
 ## Pré-requisitos
 
-Para executar este projeto, você precisará ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado em sua máquina. A versão utilizada e testada no projeto gerado é **.NET 6.0**, mas você pode ter uma versão mais recente do SDK que suporte a compilação para `net6.0`.
+Para executar este projeto, você precisará ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado em sua máquina. A versão utilizada e testada no projeto gerado é **.NET 8.0**, mas você pode ter uma versão mais recente do SDK que suporte a compilação para `net8.0`.
 
-* [.NET SDK 6.0](https://dotnet.microsoft.com/download/dotnet/6.0) ou superior.
+* [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0) ou superior.
 
 ## Como Iniciar o Projeto
 
