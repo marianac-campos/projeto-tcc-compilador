@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MACSLang.CodeGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b6f0d9d59f8ab519fcd2cf84f84207fd5f59ff2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+522f0f8dd76d04265d6131d3661ae25c594a2bc1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MACSLang.CodeGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MACSLang.CodeGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
